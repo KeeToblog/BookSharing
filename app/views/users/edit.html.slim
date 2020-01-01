@@ -1,0 +1,11 @@
+- provide(:title, 'プロフィールを編集')
+- provide(:button_text, 'プロフィールを編集')
+.container
+  h1.mt-3. プロフィールを編集
+  .row.justify-content-center
+    .col-lg-8
+      = render 'form'
+      .gravatar_edit
+        = gravatar_for @user
+        a[href="http://gravatar.com/emails" target="_blank" rel='noopener']
+          | 変更

@@ -1,0 +1,8 @@
+= link_to gravatar_for(current_user, size: 80), current_user, class: "float-left mb-3 mr-3"
+.row
+  h3 = current_user.name
+.row
+  span = link_to "ユーザー情報", current_user, class: "text-secondary"
+.row
+  span = pluralize(current_user.microposts.count, "micropost")
+

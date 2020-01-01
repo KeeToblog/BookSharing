@@ -1,0 +1,16 @@
+- # HTML5を使うことを宣言する
+doctype html
+html
+  head
+    title = yield(:title)
+    = render 'layouts/rails_default'
+    = render 'layouts/shim'
+    meta[name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"]
+  body
+    = render 'layouts/header'
+    .container
+      - flash.each do |message_type, message|
+        = content_tag(:div, message, class: "alert alert-#{message_type}")
+    = yield
+    = render 'layouts/footer'
+    = debug(params) if Rails.env.development?

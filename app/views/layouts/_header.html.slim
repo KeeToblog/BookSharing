@@ -1,0 +1,24 @@
+header
+nav.navbar.navbar-dark.bg-dark.navbar-expand-md.sticky-top
+  .container
+    = link_to "Book Sharing", root_path, class: "navbar-brand mr-3"
+    button.navbar-toggler type="button" data-toggle="collapse" data-target="#navbar-content" 
+      span.navbar-toggler-icon
+    .collapse.navbar-collapse#navbar-content
+      ul.nav.navbar-nav
+        li = link_to "トップ", root_path, class: "nav-link navbar-item ml-3"
+        li = link_to "ヘルプ", help_path, class: "nav-link navbar-item ml-3"
+        - if logged_in?
+          li = link_to "ユーザー一覧", users_path, class: "nav-link navbar-item ml-3"
+          li.dropdown.ml-3
+            a.nav-link.dropdown-toggle[href="#" data-toggle="dropdown"]
+              |  アカウント
+              b.caret
+            ul.dropdown-menu.bg-dark
+              li = link_to "ユーザー情報", user_path(current_user), class: "nav-link navbar-item ml-3"
+              li = link_to "プロフィールを編集", edit_user_path(current_user), class: "nav-link navbar-item ml-3"
+              li.dropdown-divider
+              li = link_to "ログアウト", logout_path, class: "nav-link navbar-item ml-3", method: :delete
+        - else
+          li = link_to "ログイン", login_path, class: "nav-link navbar-item ml-3"
+          li = link_to "新規登録", signup_path, class: "nav-link navbar-item ml-3"

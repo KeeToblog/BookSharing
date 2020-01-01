@@ -1,0 +1,5 @@
+p
+  = @user.name
+  | さん、こんにちは
+p 下記リンクをクリックしてアカウントを有効化してください
+= link_to "ようこそ、Book Sharing へ", edit_account_activation_url(@user.activation_token, email: @user.email)

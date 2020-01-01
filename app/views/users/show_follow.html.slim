@@ -1,0 +1,29 @@
+- provide(:title, @title)
+.container
+  .row.justify-content-center.mt-3
+    .col-lg-6.col-10
+      section.user_info.float-left.mr-3
+        = gravatar_for @user
+      .row
+        h3 = @user.name
+      .row
+        span = link_to "ユーザー情報", @user
+      .row
+        span
+          b Microposts:
+          = @user.microposts.count
+  .row.justify-content-center
+    .col-lg-6.col-10
+      - @user ||= current_user
+      .stats.my-3
+        a href = following_user_path(@user)
+          button.mr-4.px-5.btn.border-secondary フォロー
+        a href = followers_user_path(@user)
+          button.px-5.btn.border-secondary フォロワー
+  .row.justify-content-center
+    .col-lg-6.col-10
+      h3 = @title
+      - if @users.any?
+        ul.users.follow.list-unstyled
+          = render @users
+        = will_paginate

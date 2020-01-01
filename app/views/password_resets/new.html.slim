@@ -1,0 +1,10 @@
+- provide(:title, "ログインパスワードの再設定手続き")
+.container
+  h1.mt-3 ログインパスワードの再設定手続き
+  .row.justify-content-center
+    .col-lg-8
+      = form_for(:password_reset, url: password_resets_path) do |f|
+        = f.label :email, "登録メールアドレス"
+        = f.email_field :email, class: 'form-control mb-3'
+        = f.submit "パスワード再設定用メールを送信", class: "btn btn-block btn-primary mb-3"
+

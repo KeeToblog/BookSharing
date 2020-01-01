@@ -1,0 +1,13 @@
+- provide(:title, 'パスワード再設定')
+.container
+  h1.mt-3 パスワード再設定
+  .row.justify-content-center
+    .col-lg-8
+      = form_for(@user, url: password_reset_path(params[:id])) do |f|
+        = render 'shared/error_messages', object: f.object
+        = hidden_field_tag :email, @user.email
+        = f.label :password, "パスワード"
+        = f.password_field :password, class: 'form-control mb-3'
+        = f.label :password_confirmation, "パスワード（確認）"
+        = f.password_field :password_confirmation, class: 'form-control mb-3'
+        = f.submit "パスワード再設定", class: "btn btn-block btn-primary mb-3"

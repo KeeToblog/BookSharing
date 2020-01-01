@@ -1,0 +1,21 @@
+- provide(:title, @user.name)
+.container
+  .row.justify-content-center.mt-3
+    .col-lg-6.col-10
+      section.user-info
+        h3
+          = gravatar_for @user 
+          = @user.name
+      section.stats
+        = render 'shared/stats'
+  .row.justify-content-center.mt-3
+    .col-lg-6.col-10
+      = render 'follow_form' if logged_in?
+      - if @user.microposts.any?
+        h5
+          | Microposts (
+          = @user.microposts.count
+          | )
+        ol.list-unstyled
+          = render @microposts
+        = will_paginate @microposts

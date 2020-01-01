@@ -1,0 +1,18 @@
+- provide(:title, "Log in")
+.container
+  h1.mt-3 ログイン
+  .row.justify-content-center
+    .col-lg-8.col-auto
+      = form_for(:session, url: login_path) do |f|
+        = f.label :email, "メールアドレス"
+        = f.email_field :email, class: 'form-control mb-3'
+        = f.label :password, "パスワード"
+        = link_to "（パスワードがわからない方はこちら）", new_password_reset_path
+        = f.password_field :password, class: 'form-control mb-3'
+        = f.label :remember_me, class: 'checkbox inline'
+          = f.check_box :remember_me
+          span.ml-3 ログインしたままにする
+        = f.submit "ログイン", class: "btn btn-primary btn-block my-1"
+      p 
+        | 会員登録はお済みですか？ 
+        = link_to "こちらから新規登録お願いします", signup_path
