@@ -1,14 +1,15 @@
 # BookSharingについて
 
 ## URL
-https://booksharing2019.herokuapp.com
+https://booksharing2020.herokuapp.com/
 
 ## コンセプト
 - 読んだ本の知識や感想をユーザー同士で共有し、学習効率のアップを促すサービス
 
 ## 何を意識して製作したか
-- Ruby/Railsの基礎的な知識を定着させ深めるために、[Ruby on Railsチュートリアル](https://railstutorial.jp/chapters/beginning?version=5.1)をベースに製作を進めた。
-- 実際のRailsの現場を想定して、Slim, Sass, Bootstrap, Rspecを導入した。
+- Ruby/Railsの基礎的な知識の定着と深化のため、[Ruby on Railsチュートリアル](https://railstutorial.jp/chapters/beginning?version=5.1)をベースに製作を進めた。
+- 実際のRailsの現場を想定して、Slim, Sass, Bootstrap, RSpecを導入した。
+- これからも適宜機能を追加していきます！乞うご期待！
 
 ## 実装した機能一覧
 - ユーザー登録機能
@@ -23,9 +24,9 @@ https://booksharing2019.herokuapp.com
 ## 使用した技術一覧
 ### フロントエンド
 - Slim/Sassでのマークアップ
-- Bootstrapを使用してレスポンシブデザイン化
+- Bootstrapとメディアクエリを使用してレスポンシブデザイン化
 ### サーバーサイド
-- 仕組みを学ぶために認証システムは自力で実装
+- 認証システムの仕組みを学ぶために認証系は自力で実装
 - 画像アップローダーにCarrierWaveを使用
 - RSpecを使用してテストを記述
 ### インフラ
