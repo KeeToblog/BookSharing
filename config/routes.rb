@@ -17,6 +17,7 @@ Rails.application.routes.draw do
     member do
       get :following, :followers
     end
+    resources :books, except: [:create, :destroy, :update]
   end
 
   # 上のusersリソースはデフォルトの８つのHTTPに加え、followingとfollowersを加えた合計10のHTTPが生成される。
@@ -26,4 +27,5 @@ Rails.application.routes.draw do
   resources :password_resets, only: [:new, :create, :edit, :update]
   resources :microposts, only: [:create, :destroy]
   resources :relationships, only: [:create, :destroy]
+  resources :books, only: [:create, :destroy, :update]
 end

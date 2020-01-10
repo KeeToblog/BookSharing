@@ -10,7 +10,6 @@ RSpec.feature "UsersProfile", type: :feature do
     background do
       @user = FactoryBot.create(:user)
       @other_user = FactoryBot.create(:other_user)
-      @deactivated_user = FactoryBot.create(:deactivated_user)
       @micropost = FactoryBot.create(:micropost, user: @user)
       @other_micropost = FactoryBot.create(:micropost, user: @other_user)
     end
@@ -55,8 +54,8 @@ RSpec.feature "UsersProfile", type: :feature do
     context "an unauthorized user" do
       # プロフィールページ(/users/:id)へアクセスする
       scenario "accesses a profile page" do
-        visit user_path(@deactivated_user)
-        expect(current_path).to eq root_path
+        visit user_path(@user)
+        expect(current_path).to eq login_path
       end
       # # フォローする(POSTリクエストを直接送る)
       # scenario "follow an user" do
@@ -65,7 +64,7 @@ RSpec.feature "UsersProfile", type: :feature do
       # end
       # # フォローを外す(DELETEリクエストを直接送る)
       # scenario "unfollow an user" do
-      #   delete relationship_path(relationships(@user))
+      #   delete relationship_path(@user)
       #   expect(current_path).to eq login_path
       # end
     end

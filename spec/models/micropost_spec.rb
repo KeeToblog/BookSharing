@@ -5,8 +5,6 @@ RSpec.describe Micropost, type: :model do
   before do
     @user = FactoryBot.create(:user)
     @micropost = FactoryBot.create(:micropost, user: @user)
-    @old_post = FactoryBot.create(:micropost, :orange, user: @user)
-    @newest_post = FactoryBot.create(:micropost, :most_recent, user: @user)
   end
 
   # @micropostが有効かどうかテスト
@@ -41,17 +39,20 @@ RSpec.describe Micropost, type: :model do
   describe "create date" do
     #最新のものが一番上にくる
     it "is placed in descending order" do
-      expect(@newest_post).to eq Micropost.first
+      old_post = FactoryBot.create(:micropost, :orange, user: @user)
+      newest_post = FactoryBot.create(:micropost, :most_recent, user: @user)
+      expect(newest_post).to eq Micropost.first
+      expect(@micropost).to eq Micropost.second
+      expect(old_post).to eq Micropost.third
     end
   end
 
   # ユーザーとマイクロポストの関連付け
   describe "Micropost associated with user" do
     it "is also destoryed as user destoryed" do
-      # @userにはマイクロポストが３つ投稿されている
       expect {
         @user.destroy
-      }.to change(Micropost, :count).by(-3)
+      }.to change(Micropost, :count).by(-1)
     end
   end
 

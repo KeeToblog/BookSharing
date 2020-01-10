@@ -33,3 +33,6 @@
 # Paperclipによってアップロードされたファイルを無視する
 /public/system
 /spec/test_uploads
+
+# アップロードされたテスト画像を無視する
+/public/uploads

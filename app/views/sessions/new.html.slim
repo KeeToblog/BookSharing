@@ -13,11 +13,11 @@
           = f.check_box :remember_me
           span.ml-3 ログインしたままにする
         = f.submit "ログイン", class: "btn btn-primary btn-block my-1"
-      p 
+      p.pb-3
         | 会員登録はお済みですか？ 
         = link_to "こちらから新規登録お願いします", signup_path
-      p.pt-3.border-bottom.border-secondary 
-        | テストユーザー
+      p.border-bottom.border-secondary 
+        | テストユーザー（ログインすることで本サービスのすべての機能が利用できます。）
       p 
         | メールアドレス: example@booksharing.com
       p.pb-3.border-bottom.border-secondary

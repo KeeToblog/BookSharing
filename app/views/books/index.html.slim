@@ -1,0 +1,29 @@
+- provide(:title)
+.container
+  .row.justify-content-center.my-3
+    .col
+      h3
+        = @user.name
+        | の本棚
+      h4 
+        | 登録した本 
+        = @user.books.count
+        | 冊
+  .row
+    - if @user.books.any?
+      - @books.each do |book|
+        .col-md-4
+          .card.mb-4
+            = link_to user_book_path(@user, book.id)
+              - if book.picture?
+                = image_tag book.picture.url, class: "img-fluid mx-auto d-block"
+              - else
+                = image_tag 'book-bg-smoke.jpg', class: "img-fluid mx-auto d-block"
+            .card-body
+              h5.card-title.text-primary
+                = link_to "#{book.title}", user_book_path(@user, book.id), class: "text-dark"
+              - if current_user?(book.user)
+                = link_to "編集", edit_user_book_path(@user, book.id)
+                | ／
+                = link_to "削除", book, method: :delete, data: { confirm: "本当に削除してよろしいですか？" }
+      = will_paginate @books

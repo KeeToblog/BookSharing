@@ -1,8 +1,8 @@
 // universal
-h1, h2 {
+h1 {
   text-align: center;
+  margin-top: 1rem;
 }
-
 
 // header
 .navbar-brand {
@@ -28,6 +28,19 @@ h1, h2 {
     font-weight: bold;
     margin-right: 10px;
   }
+}
+
+// 読書本投稿フォーム
+.review, .good_point {
+  // white-space: normal;
+  // white-space: nowrap;
+  // white-space: pre;
+  // white-space: pre-wrap;
+  // white-space: pre-line;
+  white-space: break-spaces;
+  // border: 1px solid #ccc;
+  // border-radius: 3px;
+  // padding: 8px;
 }
 
 .Twitter {

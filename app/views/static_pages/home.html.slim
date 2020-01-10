@@ -18,11 +18,12 @@
         = render 'shared/feed'
 - else
   .top-wrapper.jumbotron.jubotron-fluid
-    .container.text-light.text-center
-      h1 Book Sharing
-      h1 Ideas worth spreading
-      p Book Sharingはオンライン上でお気に入りの本を共有するサービスです。
-      p 本は知の宝庫です。広める価値のあるアイデア(Ideas worth spreading)をあなたも共有してみませんか。
+    .container.text-light
+      .row.justify-content-center
+        .col-lg-6.mx-auto.d-block
+          h1.text-left Book Sharing
+          p.text-left Book Sharingはオンライン上でお気に入りの本を共有するサービスです。
+          p.text-left 本は知の宝庫です。広める価値のある情報をあなたも共有してみませんか。
       .btn-wrapper.text-center
         .row.justify-content-center.d-block
           = link_to "新規登録はこちら", signup_path, class: "btn btn-success col-6 mx-auto mb-2"
@@ -33,7 +34,7 @@
   .book-wrapper
     .container.text-center.text-secondary
       .heading
-        h2.my-5 管理人の「マイ本棚」はこちら
+        h2.my-5 管理人の本棚はこちら
         = render 'static_pages/books'
 
   .message-wrapper
@@ -41,3 +42,8 @@
       .heading
         h2.my-5 さあ、アイデアを共有しよう
       = link_to "Book Sharingをはじめる", signup_path, class: "btn btn-lg border-secondary mb-5 mx-auto"
+      p 
+        | 本サービスは新規登録をしなくても、ご利用いただけます。
+      p.mb-5
+        = link_to "ログインページ", login_path
+        | からテストユーザーとしてログインしてください。
