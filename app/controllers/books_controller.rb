@@ -5,6 +5,7 @@ class BooksController < ApplicationController
   def index
     @user = User.find(params[:user_id])
     @books = @user.books.paginate(page: params[:page])
+    @book = current_user.books.build if logged_in?
   end
 
   def show
@@ -12,9 +13,9 @@ class BooksController < ApplicationController
     @book = @user.books.find(params[:id])
   end
 
-  def new
-    @book = current_user.books.build if logged_in?
-  end
+  # def new
+  #   @book = current_user.books.build if logged_in?
+  # end
 
   def create
     @book = current_user.books.build(book_params)

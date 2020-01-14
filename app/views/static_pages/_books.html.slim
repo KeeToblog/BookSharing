@@ -1,22 +1,35 @@
-.row
-  .col-md-4
-    .card.mb-3
-      = image_tag 'book-bg-smoke.jpg', class: "img-fluid mx-auto d-block"
-      .card-body.d-flex.justify-content-between
-        h4.card-title くつろぎたい！
-        p.card-text カードの内容が入りますわよ。
-        = link_to "詳細はこちら", "#", class: "btn btn-info"
-  .col-md-4
-    .card.mb-3
-      = image_tag 'book-bg-smoke.jpg', class: "img-fluid mx-auto d-block"
-      .card-body.d-flex.justify-content-between
-        h4.card-title くつろぎたい！
-        p.card-text カードの内容が入りますわよ。
-        = link_to "詳細はこちら", "#", class: "btn btn-info"
-  .col-md-4
-    .card.mb-3
-      = image_tag 'book-bg-smoke.jpg', class: "img-fluid mx-auto d-block"
-      .card-body.d-flex.justify-content-between
-        h4.card-title くつろぎたい！
-        p.card-text カードの内容が入りますわよ。
-        = link_to "詳細はこちら", "#", class: "btn btn-info"
+#main_visual.carousel.slide data-ride="carousel"
+  ol.carousel-indicators
+    li.active data-target="#main_visual" data-slide-to="0"
+    li data-target="#main_visual" data-slide-to="1"
+    li data-target="#main_visual" data-slide-to="2"
+    li data-target="#main_visual" data-slide-to="3"
+    li data-target="#main_visual" data-slide-to="4"
+    li data-target="#main_visual" data-slide-to="5"
+    li data-target="#main_visual" data-slide-to="6"
+  .carousel-inner
+    .carousel-item.active
+      = link_to user_book_path(1, 1)
+        = image_tag 'Bootstrap4.png', class: "img-carousel img-fluid mx-auto d-block"
+    .carousel-item
+      = link_to user_book_path(1, 2)
+        = image_tag 'Everyday Rails RSpec.png', class: "img-carousel img-fluid mx-auto d-block"
+    .carousel-item
+      = link_to user_book_path(1, 3)
+        = image_tag 'DevelopingSecureWebApplications.png', class: "img-carousel img-fluid mx-auto d-block"
+    .carousel-item
+      = link_to user_book_path(1, 4)
+        = image_tag 'HTML_CSS3_モダンコーディング.png', class: "img-carousel img-fluid mx-auto d-block"
+    .carousel-item
+      = link_to user_book_path(1, 5)
+        = image_tag 'Ruby_for_Professional.png', class: "img-carousel img-fluid mx-auto d-block"
+    .carousel-item
+      = link_to user_book_path(1, 6)
+        = image_tag 'RubyOnRails5.png', class: "img-carousel img-fluid mx-auto d-block"
+    .carousel-item
+      = link_to user_book_path(1, 7)
+        = image_tag 'Webを支える技術.png', class: "img-carousel img-fluid mx-auto d-block"
+  a.carousel-control-prev href="#main_visual" data-slide="prev"
+    span.carousel-control-prev-icon
+  a.carousel-control-next href="#main_visual" data-slide="next"
+    span.carousel-control-next-icon

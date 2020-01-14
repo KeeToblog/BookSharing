@@ -30,6 +30,36 @@ h1 {
   }
 }
 
+.Twitter {
+  &:before {
+    font-family: "Font Awesome 5 Brands";
+    content: "\f099";
+    font-weight: bold;
+    margin-right: 10px;
+  }
+}
+
+.carousel-indicators li{
+  background-color: darkgray;
+}
+
+.carousel-caption {
+  color: darkgray;
+  text-align: left;
+}
+
+.img-carousel {
+  height: 360px;
+  width: 640px;
+  object-fit: contain;
+}
+
+
+.carousel-control-prev, .carousel-control-next {
+  background-color: darkgray;
+}
+
+
 // 読書本投稿フォーム
 .review, .good_point {
   // white-space: normal;
@@ -41,15 +71,6 @@ h1 {
   // border: 1px solid #ccc;
   // border-radius: 3px;
   // padding: 8px;
-}
-
-.Twitter {
-  &:before {
-    font-family: "Font Awesome 5 Brands";
-    content: "\f099";
-    font-weight: bold;
-    margin-right: 10px;
-  }
 }
 
 

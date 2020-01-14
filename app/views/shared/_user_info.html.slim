@@ -1,8 +1,14 @@
-= link_to gravatar_for(current_user, size: 80), current_user, class: "float-left mb-3 mr-3"
+= link_to gravatar_for(@user, size: 80), @user, class: "float-left mb-3 mr-3"
 .row
-  h3 = current_user.name
+  h3 = @user.name
 .row
-  span = link_to "ユーザー情報", current_user, class: "text-secondary"
+  span = link_to "ユーザー情報", @user, class: "text-secondary"
 .row
-  span = pluralize(current_user.microposts.count, "micropost")
+  span 
+    = @user.microposts.count
+    |  コメント
+    |  ／ 
+    = link_to user_books_path(@user), class: "text-secondary"
+      = @user.books.count
+      |  冊
 

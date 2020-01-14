@@ -6,7 +6,7 @@
       - if @book.picture?
         = image_tag @book.picture.url, class: "img-fluid mx-auto d-block"
       - else
-        = image_tag 'book-bg-smoke.jpg', class: "img-fluid mx-auto d-block"
+        = image_tag 'book_sample.png', class: "img-fluid mx-auto d-block"
       h5.mt-5.mb-3
         b 著者
       = @book.author

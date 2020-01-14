@@ -2,13 +2,17 @@
 .container
   .row.justify-content-center.mt-3
     .col-lg-6.col-10
-      section.user-info
-        h3
-          = gravatar_for @user 
-          = @user.name
+      section.user_info
+        = render 'shared/user_info'
+  .row.justify-content-center.my-2
+    .col-lg-6.col-10
+      section.user_profile
+        = @user.profile
+  .row.justify-content-center
+    .col-lg-6.col-10
       section.stats
         = render 'shared/stats'
-  .row.justify-content-center.mt-3
+  .row.justify-content-center
     .col-lg-6.col-10
       = render 'follow_form' if logged_in?
       - if @user.microposts.any?
