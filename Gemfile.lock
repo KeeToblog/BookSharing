@@ -525,7 +525,6 @@ DEPENDENCIES
   factory_bot_rails (~> 4.11)
   faker
   fog
-  fog-aws
   font-awesome-sass (~> 5.11.2)
   html2slim
   jbuilder (~> 2.5)
