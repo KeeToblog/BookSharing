@@ -13,6 +13,7 @@ class PictureUploader < CarrierWave::Uploader::Base
 
   # Override the directory where uploaded files will be stored.
   # This is a sensible default for uploaders that are meant to be mounted:
+  # S3のディレクトリ名
   def store_dir
     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
   end
@@ -39,6 +40,7 @@ class PictureUploader < CarrierWave::Uploader::Base
 
   # Add a white list of extensions which are allowed to be uploaded.
   # For images you might use something like this:
+  # 許可する画像の拡張子
   def extension_whitelist
     %w(jpg jpeg gif png)
   end
