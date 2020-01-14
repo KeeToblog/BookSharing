@@ -27,7 +27,7 @@ Book.create!(
 "「Bootstrap」はTwitter社が開発したレスポンシブなWebページを簡単に作ることができるWebアプリケーションフレームワークです。HTMLとCSSの基本を押さえたらBootstrapも学ぶのがオススメです。Bootstrapには覚えるべきルールが少なからずありますが、マスターすればこれほど頼りになる存在はありません。本書では、テーブル、表、ボタン、フォーム、ナビゲーションなどの基本的なコンポーネントの作り方を網羅的に解説しています。この本は、本サイトの見た目にかなり貢献してくれました。感謝です。",
   good_point:
 "本書が対象としている読者は「デザインは苦手」というエンジニアや「コーディングが苦手」というデザイナーです。もちろん、初めてポートフォリオに着手する初学者にとっても役立つ一冊となっています。初学者が洗練されたコンポーネントをゼロから作るのは骨が折れます。Bootstrapを使えばおしゃれなデザインが簡単にできますし、レスポンシブWebデザインに対応しているため、スマホ対応もお手軽に実現できます。ポートフォリオ制作なら「そこそこの見た目のWebサイト」をパパッと作るくらいで十分じゃないでしょうか。そんなときにぜひ押さえたいのがこの１冊。",
-  picture: open("#{Rails.root}/app/assets/images/Bootstrap4.png"),
+  picture: open("#{Rails.root}/db/fixtures/Bootstrap4.png"),
   user_id: 1
 )
 
@@ -38,7 +38,7 @@ Book.create!(
 "内容とレビューはまだありません。",
   good_point:
 "Railsチュートリアルの2周目に取り組んでいるときに買ったのが本書です。初学者にとってキツいのがチュートリアル第６章から始まる認証システム。Railsチュートリアルでは、まずは自力で認証システムを実装することが推奨されています。とはいえ、そのままチュートリアルに突っ込んでも脳内にはセッション、クッキー、トークンの単語が踊っていることでしょう。本書で体系的な認証システムの仕組みを学んでおくのがおすすめです。「Railsチュートリアルは自分に何をさせようとしているのか」を理解しておけば挫折せずに取り組めますよ！",
-  picture: open("#{Rails.root}/app/assets/images/DevelopingSecureWebApplications.png"),
+  picture: open("#{Rails.root}/db/fixtures/DevelopingSecureWebApplications.png"),
   user_id: 1
 )
 
@@ -49,7 +49,7 @@ Book.create!(
 "内容とレビューはまだありません。",
   good_point:
 "おすすめポイントはまだありません。",
-  picture: open("#{Rails.root}/app/assets/images/Everyday Rails RSpec.png"),
+  picture: open("#{Rails.root}/db/fixtures/Everyday Rails RSpec.png"),
   user_id: 1
 )
 
@@ -60,7 +60,7 @@ Book.create!(
 "内容とレビューはまだありません。",
   good_point:
 "おすすめポイントはまだありません。",
-  picture: open("#{Rails.root}/app/assets/images/HTML_CSS3_モダンコーディング.png"),
+  picture: open("#{Rails.root}/db/fixtures/HTML_CSS3_モダンコーディング.png"),
   user_id: 1
 )
 
@@ -71,7 +71,7 @@ Book.create!(
 "内容とレビューはまだありません。",
   good_point:
 "おすすめポイントはまだありません。",
-  picture: open("#{Rails.root}/app/assets/images/Ruby_for_Professional.png"),
+  picture: open("#{Rails.root}/db/fixtures/Ruby_for_Professional.png"),
   user_id: 1
 )
 
@@ -82,7 +82,7 @@ Book.create!(
 "内容とレビューはまだありません。",
   good_point:
 "おすすめポイントはまだありません。",
-  picture: open("#{Rails.root}/app/assets/images/RubyOnRails5.png"),
+  picture: open("#{Rails.root}/db/fixtures/RubyOnRails5.png"),
   user_id: 1
 )
 
@@ -93,7 +93,7 @@ Book.create!(
 "内容とレビューはまだありません。",
   good_point:
 "おすすめポイントはまだありません。",
-  picture: open("#{Rails.root}/app/assets/images/Webを支える技術.png"),
+  picture: open("#{Rails.root}/db/fixtures/Webを支える技術.png"),
   user_id: 1
 )
 
