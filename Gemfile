@@ -97,7 +97,7 @@ group :production do
   # 本番環境（production）、つまりherokeではpg（PostgreSQL）というデータベースを使う。
   gem 'pg'
   # 本番環境で画像をアップロードする
-  gem 'fog',  '1.42'
+  gem 'fog'
 end
 
 
