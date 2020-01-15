@@ -6,9 +6,9 @@ ruby '2.6.5'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
 # 画像のリサイズ
-gem 'mini_magick'
+gem 'mini_magick', '4.7.0'
 # 画像アップローダー
-gem 'carrierwave'
+gem 'carrierwave', '1.2.2'
 # jQuery(JavaScriptライブラリ)
 gem 'jquery-rails'
 # ダミーユーザーを作る
@@ -97,7 +97,7 @@ group :production do
   # 本番環境（production）、つまりherokeではpg（PostgreSQL）というデータベースを使う。
   gem 'pg'
   # 本番環境で画像をアップロードする
-  gem 'fog'
+  gem 'fog', '1.42'
 end
 
 
