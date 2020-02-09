@@ -10,7 +10,7 @@ gem 'mysql2', '~> 0.5.2'
 # 環境変数の管理をする
 gem 'dotenv-rails'
 # 画像のリサイズ
-gem 'mini_magick', '4.7.0'
+gem 'mini_magick', '4.9.4'
 # 画像アップローダー
 gem 'carrierwave', '1.2.2'
 # jQuery(JavaScriptライブラリ)
