@@ -5,6 +5,10 @@ ruby '2.6.5'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
+# mysql
+gem 'mysql2', '~> 0.5.2'
+# 環境変数の管理をする
+gem 'dotenv-rails'
 # 画像のリサイズ
 gem 'mini_magick', '4.7.0'
 # 画像アップローダー
@@ -62,7 +66,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # 開発（ローカル）環境（development, test）ではRailsに初めからついているSQLite3を使う。
-  gem 'sqlite3'
+  # gem 'sqlite3'
   # RubyにおけるBDDのためのテスティングフレームワーク
   gem 'rspec-rails', '~> 3.7'
   # テスト用データを作成する。Rails標準のFixtureの代替になる。
@@ -95,9 +99,11 @@ end
 
 group :production do
   # 本番環境（production）、つまりherokeではpg（PostgreSQL）というデータベースを使う。
-  gem 'pg'
+  # gem 'pg'
   # 本番環境で画像をアップロードする
-  gem 'fog', '1.42'
+  gem 'fog'
+  # アプリケーションサーバーの一種
+  gem 'unicorn'
 end
 
 

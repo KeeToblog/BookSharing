@@ -5,21 +5,32 @@
 #   gem 'sqlite3'
 #
 default: &default
-  adapter: sqlite3
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  timeout: 5000
+# adapter: sqlite3
+# pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+# timeout: 5000
+  adapter: mysql2 #使用するDBの種類
+# reconnect: #再接続するかどうか
+  pool: 5 #コネクションプーリングで使用するコネクションの上限
+  username: root
+  password:
+  host: localhost #host: MySQLが動作しているホスト名,127.0.0.1:ループバックアドレス。 localhostと同じ
+
+
 
 development:
   <<: *default
-  database: db/development.sqlite3
+  # database: db/development.sqlite3
+  database: BookSharing_development
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: db/test.sqlite3
+  # database: db/test.sqlite3
+  database: BookSharing_test
 
 production:
   <<: *default
-  database: db/production.sqlite3
+  # database: db/production.sqlite3
+  database: BookSharing_production
