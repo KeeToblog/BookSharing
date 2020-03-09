@@ -99,15 +99,15 @@ Book.create!(
 
 10.times do
   users = User.order(:created_at).take(6)
-  content = Faker::Lorem.sentence(5)
+  content = Faker::Lorem.sentence(word_count:5)
   users.each { |user| user.microposts.create!(content: content) }
 end
 10.times do
   users = User.where(id: [2,3,4,5,6])
   title = Faker::Book.title
   author = Faker::Book.author
-  content = Faker::Lorem.sentence(5)
-  good_point = Faker::Lorem.sentence(5)
+  content = Faker::Lorem.sentence(word_count:5)
+  good_point = Faker::Lorem.sentence(word_count:5)
   users.each { |user| user.books.create!(title: title, author: author, content: content, good_point: good_point ) }
 end
 
