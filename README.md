@@ -1,7 +1,7 @@
 # BookSharingについて
 
 ## URL
-https://booksharing2020.herokuapp.com/
+https://apps.bookbooking2020.com/
 
 ## コンセプト
 - 読んだ本の知識や感想をユーザー同士で共有し、学習効率のアップを促すサービス
@@ -34,6 +34,7 @@ https://booksharing2020.herokuapp.com/
 - 画像アップローダーにCarrierWaveを使用
 - RSpecを使用してテストを記述
 ### インフラ
-- DB:SQLite(開発環境), PostgreSQL(本番環境)
-- Herokuへのデプロイ
-
+- AWS（EC2サーバー）にLNMR環境（Linux, Nginx, MariaDB, Ruby）を構築した
+- DB:MariaDB(開発環境), MariaDB(本番環境)
+- Webサーバー（Nginx）とWebアプリケーションサーバー（Puma）はUnixドメインソケットで接続した
+- Route53とロードバランサー(ELB）を使用してSSL通信化
