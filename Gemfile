@@ -8,7 +8,7 @@ gem 'rails', '~> 5.2.3'
 # 環境変数の保存ファイル
 gem 'dotenv-rails', groups: [:development, :test]
 # 画像のリサイズ
-gem 'mini_magick', '4.7.0'
+gem 'mini_magick', '4.9.4'
 # 画像アップローダー
 gem 'carrierwave', '1.2.2'
 # jQuery(JavaScriptライブラリ)
