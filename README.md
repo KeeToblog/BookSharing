@@ -33,7 +33,7 @@ https://apps.bookbooking2020.com/
 - 画像アップローダーにCarrierWaveを使用
 - RSpecを使用してテストを記述
 ### インフラ
-- AWS（EC2サーバー）にLNMR環境（Linux, Nginx, MariaDB, Ruby）を構築
+- AWS（EC2サーバー）にLinux, Nginx, MariaDB, Rubyの環境を構築
 - DB:MariaDB(開発環境), MariaDB(本番環境)
 - Webサーバー（Nginx）とWebアプリケーションサーバー（Puma）はUnixドメインソケットで接続
 - Route53とロードバランサー(ELB）を使用してSSL通信化
