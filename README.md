@@ -4,13 +4,13 @@
 https://apps.bookbooking2020.com/
 
 ## コンセプト
-- 読んだ本の知識や感想をユーザー同士で共有し、学習効率のアップを促すサービス
+- 読んだ本の知識や感想をユーザー同士で共有し、学習効率のアップを促すサービスです。同じプログラミング初学者への情報共有と学習の振り返りのため、自分の本棚にはプログラミング関連の本を登録しました。
 
-## 何を意識して制作したか
-- Ruby/Railsの基礎的な知識の定着と深化のため、[Ruby on Railsチュートリアル](https://railstutorial.jp/chapters/beginning?version=5.1)をベースに制作を進めた。
-- 実際のRailsの現場を想定して、Slim, Sass, Bootstrap, RSpecを導入した。
-- 同じプログラミング初学者への情報共有と自分の学習履歴を振り返るため、自分の本棚にはプログラミング関連の本を登録した。
-- これからも適宜機能を追加していきます！乞うご期待！
+## こだわりポイント
+- Ruby/Railsの基礎的な知識の定着を目的として、Ruby on Railsチュートリアルをベースに制作を進めました。
+- 実際のRailsの現場を想像して、Slim, Sass, Bootstrap, RSpecを導入しました。
+- 見た目（ビュー）のコードを簡潔に書くため、Bootstrapのコンポーネントを積極的に使いました。
+- AWSをインフラに使用しました。多くの企業が使用しているツールであり、私自身もクラウドに興味があって勉強したかったからです。
 
 ## 実装した機能一覧
 - ユーザー登録機能
@@ -30,11 +30,10 @@ https://apps.bookbooking2020.com/
 - Slim/Sassでのマークアップ
 - Bootstrapとメディアクエリを使用してレスポンシブデザイン化
 ### サーバーサイド
-- 認証システムの仕組みを学ぶため、Deviseなどのgemは使用しなかった
 - 画像アップローダーにCarrierWaveを使用
 - RSpecを使用してテストを記述
 ### インフラ
-- AWS（EC2サーバー）にLNMR環境（Linux, Nginx, MariaDB, Ruby）を構築した
+- AWS（EC2サーバー）にLNMR環境（Linux, Nginx, MariaDB, Ruby）を構築
 - DB:MariaDB(開発環境), MariaDB(本番環境)
-- Webサーバー（Nginx）とWebアプリケーションサーバー（Puma）はUnixドメインソケットで接続した
+- Webサーバー（Nginx）とWebアプリケーションサーバー（Puma）はUnixドメインソケットで接続
 - Route53とロードバランサー(ELB）を使用してSSL通信化
