@@ -37,3 +37,6 @@ https://apps.bookbooking2020.com/
 - DB:MariaDB(開発環境), MariaDB(本番環境)
 - Webサーバー（Nginx）とWebアプリケーションサーバー（Puma）はUnixドメインソケットで接続
 - Route53とロードバランサー(ELB）を使用してSSL通信化
+
+## BookSharing システム構成図
+![BookSharing_システム構成図](https://user-images.githubusercontent.com/57442237/86784727-d0478280-c09c-11ea-9d16-ac6e15764b01.jpg)
