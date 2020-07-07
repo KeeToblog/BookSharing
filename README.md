@@ -40,3 +40,7 @@ https://apps.bookbooking2020.com/
 
 ## BookSharing システム構成図
 ![BookSharing_システム構成図](https://user-images.githubusercontent.com/57442237/86784727-d0478280-c09c-11ea-9d16-ac6e15764b01.jpg)
+### 参照
+- [Amazon Web Services 基礎からのネットワーク＆サーバー構築　改訂版](https://www.nikkeibp.co.jp/atclpubmkt/book/17/261530/)
+- [ゼロからわかる Amazon Web Services超入門 はじめてのクラウド](https://gihyo.jp/book/2019/978-4-297-10661-4)
+- [(下準備編)世界一丁寧なAWS解説。EC2を利用して、RailsアプリをAWSにあげるまで](https://qiita.com/naoki_mochizuki/items/f795fe3e661a3349a7ce)
