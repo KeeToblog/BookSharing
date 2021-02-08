@@ -10,7 +10,7 @@ gem 'dotenv-rails', groups: [:development, :test]
 # 画像のリサイズ
 gem 'mini_magick', '4.7.0'
 # 画像アップローダー
-gem 'carrierwave', '1.2.2'
+gem 'carrierwave', '1.3.2'
 # jQuery(JavaScriptライブラリ)
 gem 'jquery-rails'
 # ダミーユーザーを作る
